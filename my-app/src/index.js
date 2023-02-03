@@ -9,20 +9,20 @@ import App from './App';
 // альтернативный синтаксис:
 // const elem = React.createElement('h2', { className: 'greetings' }, 'Hello, World!')
 
-const text = 'Hello, World!'
-const elem = (
-  <div>
-    <h2 className='text'>Text: {text}</h2>
-    {/* Объекты всталять нельзя: */}
-    {/* <h2>{new Date}</h2> */}
-    <input type="text" />
-    <button>Click!</button>
-  </div>
-);
+// const text = 'Hello, World!'
+// const elem = (
+//   <div>
+//     <h2 className='text'>Text: {text}</h2>
+//     {/* Объекты всталять нельзя: */}
+//     {/* <h2>{new Date}</h2> */}
+//     <input type="text" />
+//     <button>Click!</button>
+//   </div>
+// );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  elem,
+  <App />
 );
 
 
