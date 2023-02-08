@@ -29,25 +29,42 @@ class WhoAmI extends Component {
     super(props);
     this.state = {
       years: 27,
-      text: '+++'
+      text: '+++',
+      position: ''
     }
   }
 
   nextYear = () => {
-    console.log('+++');
     this.setState(state => ({
-      years: state.years + 1
+      years: state.years + 1,
     }))
+  }
+
+  commitInputChanges = (e, color) => {
+    console.log(color);
+    this.setState({
+      position: e.target.value
+    })
+
   }
 
   render() {
     const { name, surname, link } = this.props;
+    const { position, years, text } = this.state;
+
     return (
       <div>
-        <h1>My name is {name}, surname - {surname}, age - {this.state.years}</h1>
+        <h1>My name is {name}, surname - {surname},
+          age - {years},
+          position - {position}</h1>
         <a href={link}>My profile</a>
         <br />
-        <button onClick={this.nextYear}>{this.state.text}</button>
+        <button onClick={this.nextYear}>{text}</button>
+        <form>
+          <span>Введите должность</span>
+          <input type="text" onInput={(e) =>
+            this.commitInputChanges(e, 'red')} />
+        </form>
       </div >
     )
   }
