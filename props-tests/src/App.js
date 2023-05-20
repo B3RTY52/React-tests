@@ -75,7 +75,6 @@ function App() {
     <div className="App">
       <WhoAmI name="Albert" surname="Smith" link="facebook.com" />
       <WhoAmI name="Alex" surname="Ivanov" link="vk.com" />
-      <WhoAmI name="Albert" surname="Smith" link="facebook.com" />
     </div>
   );
 }
