@@ -35,7 +35,11 @@ class WhoAmI extends Component {
   }
 
   nextYear = () => {
+    // стейт в данном случае уже приходит из свойств
     this.setState(state => ({
+      // через ++инкримент не делать, тк он меняет само состояние 
+      // а оно должно оставаться неизменным (меняется только сетстейтом)
+      // "сетстейт" запускает перерисовку отдельного компонента
       years: state.years + 1,
     }))
   }
@@ -69,7 +73,7 @@ class WhoAmI extends Component {
     )
   }
 }
-
+ё
 function App() {
   return (
     <div className="App">
