@@ -58,7 +58,8 @@ class WhoAmI extends Component {
 
     return (
       <div>
-        <h1>My name is {name}, surname - {surname},
+        <h1>My name is {name},
+          surname - {surname},
           age - {years},
           position - {position}</h1>
         <a href={link}>My profile</a>
@@ -73,7 +74,7 @@ class WhoAmI extends Component {
     )
   }
 }
-ё
+
 function App() {
   return (
     <div className="App">
