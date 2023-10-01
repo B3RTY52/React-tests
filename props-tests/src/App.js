@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { Component, Fragment } from 'react';
 import './App.css';
 
 // как работает под копотом?
@@ -57,7 +57,8 @@ class WhoAmI extends Component {
     const { position, years, text } = this.state;
 
     return (
-      <div>
+      // Фрагмент - необязательный синтаксис, уже можно использовать и просто пустой тег <>...</>
+      <Fragment>
         <h1>My name is {name},
           surname - {surname},
           age - {years},
@@ -70,7 +71,7 @@ class WhoAmI extends Component {
           <input type="text" onInput={(e) =>
             this.commitInputChanges(e, 'red')} />
         </form>
-      </div >
+      </Fragment >
     )
   }
 }
