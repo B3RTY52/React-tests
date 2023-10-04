@@ -1,5 +1,6 @@
 import { Component, Fragment } from 'react';
 import './App.css';
+import './App.scss';
 
 // как работает под копотом?
 // function WhoAmI(props) {
@@ -66,8 +67,13 @@ class WhoAmI extends Component {
         <a href={link}>My profile</a>
         <br />
         <button onClick={this.nextYear}>{text}</button>
-        <form>
-          <span>Введите должность</span>
+        <form className='form-style'>
+          <span
+            // по умолчанию задаются пиксели:
+            style={{ fontSize: 40, color: 'red' }}
+          // если нужны другие - то это делается в формате строки:
+          // style={{ fontSize: '4em' }}
+          >Введите должность</span>
           <input type="text" onInput={(e) =>
             this.commitInputChanges(e, 'red')} />
         </form>
