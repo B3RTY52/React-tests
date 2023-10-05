@@ -1,4 +1,6 @@
 import { Component, Fragment } from 'react';
+
+import styled from 'styled-components';
 import './App.css';
 import './App.scss';
 
@@ -82,12 +84,17 @@ class WhoAmI extends Component {
   }
 }
 
+const Wrapper = styled.div`
+  width: 600px;
+  margin: 80px auto 0 auto;
+`;
+
 function App() {
   return (
-    <div className="App">
+    <Wrapper>
       <WhoAmI name="Albert" surname="Smith" link="facebook.com" />
       <WhoAmI name="Alex" surname="Ivanov" link="vk.com" />
-    </div>
+    </Wrapper>
   );
 }
 
