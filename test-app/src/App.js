@@ -72,7 +72,7 @@ class WhoAmI extends Component {
         <form className='form-style'>
           <span
             // по умолчанию задаются пиксели:
-            style={{ fontSize: 40, color: 'red' }}
+            style={{ fontSize: 35, color: 'red' }}
           // если нужны другие - то это делается в формате строки:
           // style={{ fontSize: '4em' }}
           >Введите должность</span>
