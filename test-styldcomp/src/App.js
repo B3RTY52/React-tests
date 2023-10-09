@@ -38,15 +38,14 @@ export const Button = styled.button`
   box-shadow: 5px 5px 10px rgba(0, 0, 0, .2)
 `;
 
+// class
 class WhoAmI extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      years: 27,
-      text: '+++',
-      position: ''
-    }
+  state = {
+    years: 27,
+    text: '+++',
+    position: ''
   }
+
 
   nextYear = () => {
 
@@ -60,8 +59,14 @@ class WhoAmI extends Component {
     this.setState({
       position: e.target.value
     })
-
   }
+
+  // тест статика, чтобы экспортировать метод класса внутри компонента:
+  static inLog = () => {
+    console.log('hey hey');
+  }
+
+  // кроме функций статичными могут быть лю
 
   render() {
     const { name, surname, link } = this.props;
@@ -100,5 +105,7 @@ function App() {
     </Wrapper>
   );
 }
+
+WhoAmI.inLog();
 
 export default App;
